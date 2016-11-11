@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 
+const styles = require('./button.css');
+
 interface IButtonProps extends React.Props<any> {
   onClick?: () => void;
   type?: string;
@@ -17,7 +19,7 @@ export default function Button({
   testid = '',
   children = null
 }: IButtonProps) {
-  const buttonClasses = classNames('btn', 'btn-primary', className);
+  const buttonClasses = classNames(styles.btn, className);
 
   return (
     <button

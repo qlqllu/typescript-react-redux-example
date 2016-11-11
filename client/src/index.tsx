@@ -12,7 +12,7 @@ const { syncHistoryWithStore } = require('react-router-redux');
 import routes from './store/routes';
 import configureStore from './store/configure-store';
 
-import './styles/index.css';
+import './index.css';
 
 declare const __TEST__: boolean;
 
