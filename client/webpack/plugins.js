@@ -25,19 +25,9 @@ const basePlugins = [
   new CopyWebpackPlugin([
     { from: 'src/assets', to: 'assets' },
   ]),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    minChunks: (module) => {
-      var userRequest = module.userRequest;
-
-      if (typeof userRequest !== 'string') {
-        return false;
-      }
-
-      return userRequest.indexOf('node_modules') >= 0 ;
-    },
-    filename: 'vendor.js',
-  })
+  new SplitByPathPlugin([
+    { name: 'vendor', path: [path.join(__dirname, '..', 'node_modules/')] },
+  ])
 ].concat(sourceMap);
 
 const devPlugins = [
@@ -49,9 +39,6 @@ const devPlugins = [
 ];
 
 const prodPlugins = [
-  new SplitByPathPlugin([
-    { name: 'vendor', path: [path.join(__dirname, '..', 'node_modules/')] },
-  ]),
   new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false,
