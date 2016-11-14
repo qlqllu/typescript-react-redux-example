@@ -7,20 +7,14 @@
     "node": "6"
   },
   "scripts": {
-    "dev:server": "cross-env NODE_ENV=development PORT=3000 nodemon server/node-server.js",
-    "dev:client": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot --progress --no-info",
-    "dev": "concurrently -r \"npm run dev:client\" \"npm run dev:server\"",
     "lint": "npm run lint-ts && npm run lint-js && npm run lint-css",
-    "lint-css": "stylelint \"./src/**/*.css\"",
-    "lint-ts": "tslint \"src/**/*.tsx\" \"src/**/*.ts\" \"test/**/*.tsx\" \"test/**/*.ts\"",
+    "lint-css": "stylelint \"./client/src/**/*.css\" --config client/.stylelintrc",
+    "lint-ts": "tslint -e \"**/node_modules/**\" \"**/*.tsx\" \"**/*.ts\" ",
     "lint-js": "eslint \"**/*.js\" --ignore-path .gitignore",
-    "postinstall": "npm run typings",
-    "start": "cross-env NODE_ENV=production node server/node-server.js",
     "pretest": "npm run lint",
     "test": "karma start --singleRun true",
     "test:watch": "karma start --singleRun false",
-    "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50",
-    "typings": "rimraf typings/ && typings install"
+    "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50"
   },
   "keywords": [
     "react",
@@ -39,5 +33,8 @@
   "dependencies": {
   },
   "devDependencies": {
+    "stylelint": "^7.5.0",
+    "tslint": "^3.7.4",
+    "eslint": "^3.2.0"
   }
 }
