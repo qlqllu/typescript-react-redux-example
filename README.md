@@ -6,14 +6,34 @@ This is the initial version of our starter project using React, TypeScript and W
 
 ## npm scripts
 
-### Dev
-```bash
-$ npm run dev
+### Set up
+```
+$ npm install
+
+$ cd client
+$ npm install
+
+$ cd ../server
+$ npm install
 ```
 
-This runs a development mode server with live reload etc.
+### Dev
 
+#### client
+```
+$ cd client
+$ npm run server:dev
+```
 Open `http://localhost:8080` in your browser.
+
+#### server
+```
+$ cd server
+$ npm run server:dev
+```
+Open `http://localhost:3000` in your browser.
+
+
 
 ### Production
 
