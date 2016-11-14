@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
 
-import immutableToJS from './immutable-to-js';
+import immutableToJS from '../immutable-to-js';
 
 describe('immutableToJS', () => {
   const mockState = {

@@ -2,7 +2,7 @@ import { shallow, render } from 'enzyme';
 
 import * as React from 'react';
 
-import Button from './index';
+import Button from '../button/button.component';
 
 describe('Button Component', () => {
   it('should create a button with a default type and classes', () => {

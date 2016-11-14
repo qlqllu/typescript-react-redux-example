@@ -13,7 +13,6 @@
     "server:dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress",
     "server:prod": "cross-env NODE_ENV=production webpack-dev-server --progress",
     "postinstall": "npm run build",
-    "pretest": "npm run lint",
     "test": "karma start --singleRun true",
     "test:watch": "karma start --singleRun false",
     "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50"

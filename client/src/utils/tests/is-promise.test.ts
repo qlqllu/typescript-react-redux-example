@@ -1,4 +1,4 @@
-import isPromise from './is-promise';
+import isPromise from '../is-promise';
 
 describe('isPromise', () => {
   it('should return true for an object that is a promise', () => {
