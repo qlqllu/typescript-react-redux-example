@@ -4,14 +4,14 @@ import Button from '../../components/button/button.component';
 
 interface ICounterProps extends React.Props<any> {
   counter: number;
-  increment: () => void;
-  decrement: () => void;
+  increaseCounter: () => void;
+  decreaseCounter: () => void;
 };
 
 export default function Counter({
   counter,
-  increment,
-  decrement
+  increaseCounter,
+  decreaseCounter
 }: ICounterProps) {
   return (
     <div className="flex">
@@ -19,7 +19,7 @@ export default function Counter({
         testid="counter-decrementButton"
         id="qa-decrement-button"
         className="bg-black col-2"
-        onClick={decrement}>
+        onClick={decreaseCounter}>
         -
       </Button>
 
@@ -27,14 +27,14 @@ export default function Counter({
         data-testid="counter-result"
         id="qa-counter-div"
         className="flex-auto center h1">
-        {counter}
+        The current value: {counter}
       </div>
 
       <Button
         testid="counter-incrementButton"
         id="qa-increment-button"
         className="col-2"
-        onClick={increment}>
+        onClick={increaseCounter}>
         +
       </Button>
     </div>
