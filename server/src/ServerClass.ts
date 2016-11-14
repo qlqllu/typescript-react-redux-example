@@ -94,11 +94,15 @@ export class Server {
    * @return void
    */
   private routes() {
-    this.app.use('/', (req, res) => {
-      res.send('Please return index page');
-    });
     //use router middleware
     this.app.use('/rest', apiRoutes);
+
+    if(process.env.NODE_ENV === 'production'){
+      this.app.use('/', express.static(path.join(__dirname, '../client/builder')));
+    }else{
+      var proxy = require('express-http-proxy');
+      this.app.use('/', proxy('localhost:8080'));
+    }
   }
 
 }

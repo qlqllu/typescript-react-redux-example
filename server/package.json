@@ -31,18 +31,16 @@
     "url": "https://github.com/qlqllu/rangle-starter/issues"
   },
   "dependencies": {
-    "express": "^4.13.4",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
-    "errorhandler": "^1.4.3"
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-http-proxy": "^0.10.1"
   },
   "devDependencies": {
     "cross-env": "^2.0.0",
     "concurrently": "^2.0.0",
     "nodemon": "^1.9.2",
-
-
-
     "ts-helpers": "^1.1.1",
     "typescript": "^2.0.8",
     "@types/body-parser": "0.0.33",

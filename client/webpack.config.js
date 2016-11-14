@@ -15,7 +15,7 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'builder'),
     filename: '[name].js',
     publicPath: '/',
     sourceMapFilename: '[name].js.map',

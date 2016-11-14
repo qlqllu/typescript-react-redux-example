@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --progress",
-    "clean": "rimraf dist/",
+    "clean": "rimraf builder/",
     "server:dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --progress",
     "server:prod": "cross-env NODE_ENV=production webpack-dev-server --progress",
     "postinstall": "npm run build",
