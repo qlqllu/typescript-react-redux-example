@@ -1,4 +1,3 @@
-[![Circle CI](https://circleci.com/gh/rangle/typescript-react-redux-starter.svg?style=svg)](https://circleci.com/gh/rangle/typescript-react-redux-starter)
 
 # TypeScript/React/Redux Starter
 
