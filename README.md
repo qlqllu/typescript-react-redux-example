@@ -40,16 +40,19 @@ Tests
 #### Client tests
 ###### Single Run
 ```bash
+$ cd client
 $ npm run test
 ```
 
 ###### Watch Files
 ```bash
+$ cd client
 $ npm run test:watch
 ```
 
 ###### Coverage
 ```bash
+$ cd client
 $ npm run cover
 ```
 
