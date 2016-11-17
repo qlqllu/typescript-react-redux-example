@@ -40,9 +40,13 @@ module.exports = (config) => {
       './src/tests.entry.ts': [
         'webpack',
         'sourcemap',
+        'sourcemap-writer', 
+        'coverage'
       ],
       './src/**/!(*.test).(ts|js)': [
         'sourcemap',
+        'sourcemap-writer', 
+        'coverage'          
       ],
     },
 

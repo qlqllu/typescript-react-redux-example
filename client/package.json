@@ -98,6 +98,7 @@
     "istanbul-instrumenter-loader": "^1.0.0",
     "jasmine-core": "^2.4.1",
     "@types/enzyme": "2.5.38",
-    "@types/jasmine": "2.5.38"
+    "@types/jasmine": "2.5.38",
+    "source-map-support": "^0.4.0"
   }
 }
