@@ -11,6 +11,7 @@ testContext('./index.tsx');
 
 testContext.keys().forEach(
   key => {
+    console.log('key111:', key);
     if (/\.test\.tsx?$/.test(key)) {
       testContext(key);
     }

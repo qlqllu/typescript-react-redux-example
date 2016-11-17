@@ -21,14 +21,16 @@ const basePlugins = [
     template: './src/index.html',
     inject: 'body',
   }),
-  new webpack.NoErrorsPlugin(),
+  // new webpack.NoErrorsPlugin(),
   new CopyWebpackPlugin([
     { from: 'src/assets', to: 'assets' },
   ]),
-  new SplitByPathPlugin([
-    { name: 'vendor', path: [path.join(__dirname, '..', 'node_modules/')] },
-  ])
 ].concat(sourceMap);
+
+//we do not add this plugin when test
+const splitCodePlugin = new SplitByPathPlugin([
+  { name: 'vendor', path: [path.join(__dirname, '..', 'node_modules/')] },
+]);
 
 const devPlugins = [
   new StyleLintPlugin({
@@ -36,6 +38,7 @@ const devPlugins = [
     files: ['src/**/*.css'],
     failOnError: false,
   }),
+  splitCodePlugin
 ];
 
 const prodPlugins = [
@@ -44,6 +47,7 @@ const prodPlugins = [
       warnings: false,
     },
   }),
+  splitCodePlugin
 ];
 
 module.exports = basePlugins

@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "react": "^15.3.0",
-    "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.4",
     "react-router": "^2.5.2",
@@ -84,7 +83,8 @@
     "autoprefixer": "^6.3.3",
 
 
-    "enzyme": "^2.4.0",
+    "enzyme": "^2.6.0",
+    "react-addons-test-utils": "^15.3.0",
     "karma": "^1.1.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.0.0",
@@ -96,6 +96,8 @@
     "karma-webpack": "^1.7.0",
     "istanbul": "^1.0.0-alpha.2",
     "istanbul-instrumenter-loader": "^1.0.0",
-    "jasmine-core": "^2.4.1"
+    "jasmine-core": "^2.4.1",
+    "@types/enzyme": "2.5.38",
+    "@types/jasmine": "2.5.38"
   }
 }

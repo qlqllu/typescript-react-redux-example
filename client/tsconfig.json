@@ -12,7 +12,7 @@
     "sourceMap": false,
     "inlineSourceMap": true,
     "noEmitHelpers": true,
-    "types": ["node"]
+    "types": ["node", "jasmine"]
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,

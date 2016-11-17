@@ -1,5 +1,4 @@
 import { shallow, render } from 'enzyme';
-
 import * as React from 'react';
 
 import Button from '../button/button.component';

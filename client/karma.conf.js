@@ -47,9 +47,6 @@ module.exports = (config) => {
     },
 
     webpack: Object.assign({}, webpack, {
-      entry: './src/tests.entry.ts',
-      output: null,
-      devtool: '#inline-source-map',
       verbose: false,
       module: {
         loaders: combinedLoaders(),
@@ -59,8 +56,7 @@ module.exports = (config) => {
       },
       stats: {
         colors: true,
-        reasons: true,
-        chunks: false
+        reasons: true
       },
       debug: config.singleRun ? false : true,
       plugins,
@@ -69,6 +65,7 @@ module.exports = (config) => {
 
     webpackServer: {
       noInfo: true, // prevent console spamming when running in Karma!
+      stats: { chunks: false }
     },
 
     reporters: ['spec']
@@ -113,7 +110,10 @@ function combinedLoaders() {
     case 'tsx':
       return aggregate.concat([ // force inline source maps
         Object.assign(loaders[k],
-          { query: { babelOptions: { sourceMaps: 'both' } } })]);
+          { query: {
+            babelOptions: { sourceMaps: 'both' }
+          } 
+        })]);
     default:
       return aggregate.concat([loaders[k]]);
     }
