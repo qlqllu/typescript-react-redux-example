@@ -11,7 +11,6 @@ describe('Button Component', () => {
     expect(button.length).toBe(1);
     expect(button.text()).toBe('OK');
     expect(button.prop('type')).toBe('button');
-    expect(button.hasClass('btn-primary')).toBe(true);
   });
 
   it('should allow for a custom css class in addition to the default', () => {
@@ -19,7 +18,6 @@ describe('Button Component', () => {
     const button = wrapper.find('button');
 
     expect(button.hasClass('bg-green')).toBe(true);
-    expect(button.hasClass('btn-primary')).toBe(true);
   });
 
   it('should create a submit button', () => {
