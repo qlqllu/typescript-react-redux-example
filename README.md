@@ -37,20 +37,23 @@ Open `http://localhost:3000` in your browser.
 
 Tests
 ------------------
-#### Single Run
+#### Client tests
+###### Single Run
 ```bash
 $ npm run test
 ```
 
-#### Watch Files
+###### Watch Files
 ```bash
 $ npm run test:watch
 ```
 
-#### Coverage
+###### Coverage
 ```bash
 $ npm run cover
 ```
+
+#### Server tests
 
 
 Production
