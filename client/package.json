@@ -15,7 +15,7 @@
     "postinstall": "npm run build",
     "test": "karma start --singleRun true",
     "test:watch": "karma start --singleRun false",
-    "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50"
+    "-posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50"
   },
   "keywords": [
     "react",
