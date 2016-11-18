@@ -28,7 +28,7 @@ exports.html = {
 
 exports.css = {
   test: /\.css$/,
-  loader: 'style-loader!css?-minimize!postcss',
+  loader: 'style-loader!css?-minimize&localIdentName=[name]__[local]!postcss',
   exclude: /node_modules/,
 };
 

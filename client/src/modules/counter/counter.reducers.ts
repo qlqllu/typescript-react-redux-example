@@ -2,10 +2,10 @@ import {
   INCREMENT_COUNTER,
   DECREMENT_COUNTER
 } from './counter.actions';
-import { fromJS } from 'immutable';
+import { fromJS, Map } from 'immutable';
 
 
-const INITIAL_STATE = fromJS({
+const INITIAL_STATE: Map<string, number> = fromJS({
   count: 0,
 });
 

@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {State} from '../../classes/store';
+
 const connect = require('react-redux').connect;
 
 import { increment, decrement } from './counter.actions';
@@ -10,7 +12,7 @@ interface ICounterPageProps extends React.Props<any> {
   decreaseCounter: () => void;
 };
 
-function mapStateToProps(state) {
+function mapStateToProps(state: State) {
   return {
     counter: state.counter.get('count'),
   };
