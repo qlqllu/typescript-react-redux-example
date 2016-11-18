@@ -46,9 +46,6 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      loaders.tslint,
-    ],
     loaders: [
       loaders.tsx,
       loaders.html,
