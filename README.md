@@ -49,7 +49,7 @@ $ cd client
 $ npm run test:watch
 ```
 
-###### Coverage
+###### Coverage (TODO)
 ```bash
 $ cd client
 $ npm run cover
