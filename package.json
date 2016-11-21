@@ -9,11 +9,7 @@
   "scripts": {
     "lint": "npm run lint-ts && npm run lint-css",
     "lint-css": "stylelint \"./client/src/**/*.css\" --config client/.stylelintrc",
-    "lint-ts": "tslint -e \"**/node_modules/**\" \"**/*.tsx\" \"**/*.ts\" ",
-    "pretest": "npm run lint",
-    "test": "karma start --singleRun true",
-    "test:watch": "karma start --singleRun false",
-    "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50"
+    "lint-ts": "tslint -e \"**/node_modules/**\" \"**/*.tsx\" \"**/*.ts\" "
   },
   "keywords": [
     "react",

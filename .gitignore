@@ -45,3 +45,5 @@ client/src/**/*.ts.map
 
 # E2E test output
 e2e/robot/test_results
+
+server/src/**/*.js

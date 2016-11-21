@@ -1,5 +1,5 @@
-export interface State{
-  counter: Map<string, number>,
-  routing: any,
-  form: any,
+export interface State {
+  counter: Map<string, number>;
+  routing: any;
+  form: any;
 };

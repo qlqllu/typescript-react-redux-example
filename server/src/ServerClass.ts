@@ -1,9 +1,9 @@
-import * as bodyParser from "body-parser";
-import * as cookieParser from "cookie-parser";
-import * as express from "express";
-import * as path from "path";
-import * as http from "http";
-import errorHandler = require("errorhandler");
+import * as bodyParser from 'body-parser';
+import * as cookieParser from 'cookie-parser';
+import * as express from 'express';
+import * as path from 'path';
+import * as http from 'http';
+import errorHandler = require('errorhandler');
 
 import apiRoutes from './routes/api.routes';
 
@@ -35,13 +35,13 @@ export class Server {
    * @constructor
    */
   constructor() {
-    //create expressjs application
+    // create expressjs application
     this.app = express();
 
-    //configure application
+    // configure application
     this.config();
 
-    //add routes
+    // add routes
     this.routes();
   }
 
@@ -52,37 +52,37 @@ export class Server {
    * @method config
    */
   public config() {
-    //add static paths
-    this.app.use(express.static(path.join(__dirname, "public")));
+    // add static paths
+    this.app.use(express.static(path.join(__dirname, 'public')));
 
-    //configure pug
-    this.app.set("views", path.join(__dirname, "views"));
-    this.app.set("view engine", "pug");
+    // configure pug
+    this.app.set('views', path.join(__dirname, 'views'));
+    this.app.set('view engine', 'pug');
 
-    //mount logger
-    // this.app.use(logger("dev"));
+    // mount logger
+    //  this.app.use(logger('dev'));
 
-    //mount json form parser
+    // mount json form parser
     this.app.use(bodyParser.json());
 
-    //mount query string parser
+    // mount query string parser
     this.app.use(bodyParser.urlencoded({
       extended: true
     }));
 
-    //mount cookie parker
-    this.app.use(cookieParser("SECRET_GOES_HERE"));
+    // mount cookie parker
+    this.app.use(cookieParser('SECRET_GOES_HERE'));
 
-    //mount override?
-    // this.app.use(methodOverride());
+    // mount override?
+    //  this.app.use(methodOverride());
 
-    // catch 404 and forward to error handler
+    //  catch 404 and forward to error handler
     this.app.use(function(err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
         err.status = 404;
         next(err);
     });
 
-    //error handling
+    // error handling
     this.app.use(errorHandler());
   }
 
@@ -94,13 +94,13 @@ export class Server {
    * @return void
    */
   private routes() {
-    //use router middleware
+    // use router middleware
     this.app.use('/rest', apiRoutes);
 
-    if(process.env.NODE_ENV === 'production'){
+    if (process.env.NODE_ENV === 'production') {
       this.app.use('/', express.static(path.join(__dirname, '../client/builder')));
-    }else{
-      var proxy = require('express-http-proxy');
+    } else {
+      const proxy = require('express-http-proxy');
       this.app.use('/', proxy('localhost:8080'));
     }
   }
