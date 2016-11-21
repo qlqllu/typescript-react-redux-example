@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {State} from '../../classes/store';
+import {State} from '../../classes/state';
 
 const connect = require('react-redux').connect;
 
