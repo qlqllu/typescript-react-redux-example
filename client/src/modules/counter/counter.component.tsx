@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import Button from '../../components/button/button.component';
 
+import {ButtonToolbar, Button as Button2} from 'react-bootstrap';
+
 interface ICounterProps extends React.Props<any> {
   counter: number;
   increaseCounter: () => void;
@@ -37,6 +39,30 @@ export default function Counter({
         onClick={increaseCounter}>
         +
       </Button>
+
+      <ButtonToolbar>
+        <div>React bootstrap buttons:</div>
+        {/* Standard button */}
+        <Button2>Default</Button2>
+
+        {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+        <Button2 bsStyle="primary">Primary</Button2>
+
+        {/* Indicates a successful or positive action */}
+        <Button2 bsStyle="success">Success</Button2>
+
+        {/* Contextual button for informational alert messages */}
+        <Button2 bsStyle="info">Info</Button2>
+
+        {/* Indicates caution should be taken with this action */}
+        <Button2 bsStyle="warning">Warning</Button2>
+
+        {/* Indicates a dangerous or potentially negative action */}
+        <Button2 bsStyle="danger">Danger</Button2>
+
+        {/* Deemphasize a button by making it look like a link while maintaining button behavior */}
+        <Button2 bsStyle="link">Link</Button2>
+      </ButtonToolbar>
     </div>
   );
 }
