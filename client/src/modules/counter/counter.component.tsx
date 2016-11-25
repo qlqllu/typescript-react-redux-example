@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {FormattedMessage} from 'react-intl';
 
 import Button from '../../components/button/button.component';
 
@@ -29,7 +30,7 @@ export default function Counter({
         data-testid="counter-result"
         id="qa-counter-div"
         className="flex-auto center h1">
-        The current value: {counter}
+        <FormattedMessage id="currentValue" /> {counter}
       </div>
 
       <Button
@@ -41,7 +42,7 @@ export default function Counter({
       </Button>
 
       <ButtonToolbar>
-        <div>React bootstrap buttons:</div>
+        <div>React bootstrap buttons:<FormattedMessage id="hello" /></div>
         {/* Standard button */}
         <Button2>Default</Button2>
 

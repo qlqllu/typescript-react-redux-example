@@ -21,7 +21,7 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/',
     sourceMapFilename: '[name].js.map',
-    chunkFilename: '[id].chunk.js',
+    chunkFilename: '[name].chunk.js',
   },
 
   devtool: process.env.NODE_ENV === 'production' ?
@@ -44,7 +44,7 @@ module.exports = {
 
   devServer: {
     historyApiFallback: { index: '/' },
-    stats: { chunks: false }
+    // stats: { chunks: false }
   },
 
   module: {

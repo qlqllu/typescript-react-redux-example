@@ -42,6 +42,7 @@ typings
 client/src/**/*.js
 client/src/**/*.js.map
 client/src/**/*.ts.map
+!client/src/**/nls/**/*.js
 
 # E2E test output
 e2e/robot/test_results

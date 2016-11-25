@@ -42,6 +42,7 @@
     "classnames": "^2.2.3",
     "immutable": "^3.8.1",
     "whatwg-fetch": "^1.0.0",
+    "react-intl": "^2.1.5",
     "@types/classnames": "0.0.31",
     "@types/react": "^0.14.47",
     "@types/react-dom": "^0.14.18",
@@ -51,6 +52,7 @@
     "@types/whatwg-fetch": "0.0.32",
     "@types/node": "6.0.46",
     "@types/react-bootstrap": "^0.0.37",
+    "@types/react-intl": "^2.1.0",
 
     "ts-helpers": "^1.1.1",
     "typescript": "^2.0.8",
