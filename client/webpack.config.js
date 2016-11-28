@@ -44,7 +44,7 @@ module.exports = {
 
   devServer: {
     historyApiFallback: { index: '/' },
-    // stats: { chunks: false }
+    stats: { chunks: false }
   },
 
   module: {
